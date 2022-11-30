@@ -18,7 +18,7 @@ window = turtle.Screen()
 window.title("Meteor Storm")
 window.bgcolor("black")
 window.setup(width=500, height=650)
-window.tracer(0)  # stops window from updating allowing game to fun faster.
+window.tracer(0)  # stops window from updating allowing game to run faster.
 
 window.register_shape("heart.gif")  # set up gif
 window.register_shape("heart2.gif")
@@ -223,7 +223,7 @@ while True:
                 x = random.randint(-250, 250)
                 y = random.randint(340, 350)
                 block_p.goto(x, y)
-            if block_p.distance(block_s) < 25:
+            if block_p.distance(block_s) < 25:  # positive block collision w/ player
                 x = random.randint(-250, 250)
                 y = random.randint(340, 350)
                 block_p.goto(x, y)
